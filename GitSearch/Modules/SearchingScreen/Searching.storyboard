@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Searching View Controller-->
+        <scene sceneID="XSh-Jo-9fd">
+            <objects>
+                <viewController storyboardIdentifier="SearchingViewController" id="4r9-hW-JEp" customClass="SearchingViewController" customModule="GitSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G8f-bu-9RS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bsw-jV-We2">
+                                <rect key="frame" x="20" y="64" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="40H-2K-M8k">
+                                <rect key="frame" x="0.0" y="118" width="414" height="744"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="8ic-Zv-6jG" firstAttribute="bottom" secondItem="40H-2K-M8k" secondAttribute="bottom" id="7eV-rQ-go6"/>
+                            <constraint firstItem="Bsw-jV-We2" firstAttribute="top" secondItem="8ic-Zv-6jG" secondAttribute="top" constant="20" id="8px-r0-bMq"/>
+                            <constraint firstItem="8ic-Zv-6jG" firstAttribute="trailing" secondItem="40H-2K-M8k" secondAttribute="trailing" id="ND6-dA-nwY"/>
+                            <constraint firstItem="8ic-Zv-6jG" firstAttribute="trailing" secondItem="Bsw-jV-We2" secondAttribute="trailing" constant="20" id="Qny-PW-Rfv"/>
+                            <constraint firstItem="40H-2K-M8k" firstAttribute="top" secondItem="Bsw-jV-We2" secondAttribute="bottom" constant="20" id="Yks-RP-8hE"/>
+                            <constraint firstItem="Bsw-jV-We2" firstAttribute="leading" secondItem="8ic-Zv-6jG" secondAttribute="leading" constant="20" id="ysa-aN-EMF"/>
+                            <constraint firstItem="40H-2K-M8k" firstAttribute="leading" secondItem="8ic-Zv-6jG" secondAttribute="leading" id="z4j-ie-wNI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8ic-Zv-6jG"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchingTableView" destination="40H-2K-M8k" id="3dS-4e-i9p"/>
+                        <outlet property="searchingTextField" destination="Bsw-jV-We2" id="9XU-4E-r0v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zsI-uo-u0H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="42" y="80"/>
+        </scene>
+    </scenes>
+</document>
